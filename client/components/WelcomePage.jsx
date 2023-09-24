@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
     Routes,
     Route,
@@ -7,12 +7,13 @@ import {
  
 
 
+
 export default function WelcomePage(){
 
     return(
         <>
-        <h1>Hello!</h1>
-        <Link to="/project1"><button>New Game</button></Link>
+        <h1>Welcome to My Site</h1>
+        <Link to="/project"><button>New Game</button></Link>
         </>
     )
 }

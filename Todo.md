@@ -1,3 +1,5 @@
-[] Install react
-[] set up project for TypeScript
+[x] Install react
+[] Figure out how free database storage for pictures. Amazon S3 bucket or Firebase?
+[] Need to figure out how to retreive data for projects as well.
+[?] set up project for TypeScript
 [] look into CSS and how to make games
