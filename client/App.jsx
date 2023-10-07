@@ -12,9 +12,29 @@ export default function App(){
 
     const [projectNum, setProjectNum] = useState(1);
 
-   const handleProject = (num) => {
+   const handleProject = (num, projectTotalNum) => {
     
-    return num + projectNum > 0 ? setProjectNum(num + projectNum) : setProjectNum(1);
+    //reassign projectNum with passed in num
+    // setProjectNum(projectNum + num);
+    
+    // console.log(`expected projectNum ${projectNum + num}`)
+    // console.log({projectNum, projectTotalNum});
+
+    //determine what project number to return
+    //if the expected projectNum is greater than set projectNum to be the end of the list
+    if(projectNum + num > projectTotalNum) return setProjectNum(projectTotalNum);
+    //if expected projectNum is equal to 0 than set projectNum to be the beginning of the list
+    if(projectNum + num === 0) return setProjectNum(1);
+    //else set project num to be the expected projectNum
+    return setProjectNum(projectNum + num);
+
+    // if(projectNum === numList){
+    //     return setProjectNum(projectNum);
+    // }
+
+    // return num + projectNum > 0 ? setProjectNum(num + projectNum) : setProjectNum(1);
+
+
    }
     return (
         <>
