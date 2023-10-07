@@ -11,7 +11,7 @@
     "dev": "webpack serve --open & nodemon server/server.js",
     "start": "node server/server.js",
     "build": "webpack --config ./webpack.config.js --mode='production'",
-    "heroku-postbuild": "webpack -p"
+    "heroku-postbuild": "webpack --config ./webpack.config.js --mode='production'"
   },
   "author": "",
   "license": "ISC",
