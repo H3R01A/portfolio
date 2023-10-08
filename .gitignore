@@ -3,6 +3,9 @@ node_modules
 # build folder for production
 build
 
+# environment variables
+.env
+
 # Extras to not commit
 npm-debug.log
 .DS_Store
