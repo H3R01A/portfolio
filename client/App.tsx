@@ -12,7 +12,7 @@ export default function App(){
 
     const [projectNum, setProjectNum] = useState(1);
 
-   const handleProject = (num, projectTotalNum) => {
+   const handleProject = (num: number, projectTotalNum: number) => {
     
     //reassign projectNum with passed in num
     // setProjectNum(projectNum + num);

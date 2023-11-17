@@ -1,11 +1,13 @@
-const express = require('express');
+import express from 'express';
+import dotenv from 'dotenv';
+import path from 'path';
+import cors from 'cors';
 const app = express();
-const dotenv = require('dotenv')
-dotenv.config();
-const path = require('path');
-const cors = require('cors')
 
-let port = process.env.PORT;
+dotenv.config();
+
+
+let port: string | undefined | number = process.env.PORT;
 
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());

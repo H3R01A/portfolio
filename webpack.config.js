@@ -30,6 +30,10 @@ module.exports = {
       },
     ],
   },
+  resolve: {
+    extensions: [".js", ".jsx", ".ts", ".tsx", ".json", ".css", ".scss"],
+    modules: ["frontend", "node_modules"],
+  },
   plugins: [
     new HtmlWebpackPlugin({
       title: "Development",
