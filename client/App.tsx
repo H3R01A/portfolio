@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
-import AboutPage from './components/AboutPage.jsx';
-import WelcomePage from "./components/WelcomePage.jsx";
-import Project from './components/Project.jsx'
+import {useState} from 'react';
+import AboutPage from './components/AboutPage';
+import WelcomePage from "./components/WelcomePage";
+import Project from './components/Project'
 import {
    Routes,
    Route,

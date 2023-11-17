@@ -1,8 +1,13 @@
-import React from 'react';
+
+import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal } from 'react';
 import data from '../data';
 
+type ProjectProps = {
+    projectNum: number;
+    handleProject: (num: number, projectTotalNum: number) => void
+}
 
-export default function Project({projectNum, handleProject}){
+export default function Project({projectNum, handleProject}: ProjectProps){
 
     //!TODO: update the below fetch request to the real source of data
     // fetch('/api/pokemon')
@@ -30,7 +35,7 @@ export default function Project({projectNum, handleProject}){
         <h2>Tech Stack</h2>
         <h2>Placeholder for picture or video</h2>
         <ul>
-        {projectData.tech_stack.map(tech => <li key={`${tech}1`}>{tech}</li>)}
+        {projectData.tech_stack.map((tech: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined) => <li key={`${tech}1`}>{tech}</li>)}
         </ul>
         <button onClick={() => (handleProject(-1, data.size))}>Previous Project</button>
         <button onClick={() => (handleProject(1, data.size))}>Next Project</button>
