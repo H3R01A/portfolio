@@ -2,6 +2,9 @@ import express from 'express';
 import dotenv from 'dotenv';
 import path from 'path';
 import cors from 'cors';
+import apiRouter from './routes/api';
+
+
 const app = express();
 
 dotenv.config();
@@ -26,6 +29,9 @@ app.use(express.static(path.join(__dirname, '../build')));
 app.get('/', (req, res) => {
     return res.status(200).sendFile(path.join(__dirname, '../index.html'));
 })
+
+
+app.use('/api', apiRouter);
 
 app.get('/api/pokemon', (req, res) => {
     return res.status(200).json('Pikachu');
