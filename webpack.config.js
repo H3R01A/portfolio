@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   mode: "development", //"development" | "production"
   entry: {
-    src: "./client/index.js",
+    src: "./client/index.tsx",
   },
   output: {
     filename: "bundle.js",
@@ -13,6 +13,11 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.tsx?$/,
+        use: "ts-loader",
+        exclude: [/node_modules/],
+      },
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
