@@ -3,7 +3,7 @@ import gitHubController from "../controllers/gitHubController";
 
 const router = express.Router();
 
-router.get("/gitHubRepo", gitHubController.getRepo, (req, res) => {
+router.post("/gitHubRepo", gitHubController.getRepo, (req, res) => {
   return res.status(200).json(res.locals.gitHubData);
 });
 
