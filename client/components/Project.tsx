@@ -1,66 +1,85 @@
-
-import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal, MouseEventHandler } from 'react';
-
-
-import data from '../data';
+import {ReactElement,JSXElementConstructor,ReactNode,ReactPortal,useEffect,useState} from "react";
+import data from "../data";
 
 type ProjectProps = {
-    projectNum: number;
-    handleProject: (num: number, projectTotalNum: number) => void;
-}
+  projectNum: number;
+  handleProject: (num: number, projectTotalNum: number) => void;
+};
 
-export default function Project({projectNum, handleProject}: ProjectProps){
+type ProjectData = {
+  description: string;
+  language: string;
+};
 
-    //!TODO: update the below fetch request to the real source of data
+type TechSack = string| number| boolean| ReactElement<any, string | JSXElementConstructor<any>>| Iterable<ReactNode>| ReactPortal| null| undefined;
 
-    const getRepoData = () => {
-        
-        fetch('/api/gitHubRepo')
-        .then(data => data.json())
-        .then(data => {
-        
-        console.log(data);
-        console.log(`made it from the back with data: ${data}`);
+export default function Project({ projectNum, handleProject }: ProjectProps) {
+  const staticData = data.get(projectNum);
+  const { owner, repo } = staticData;
 
-        })
-        .catch(error => {
+  const [projectData, setProjectData] = useState({});
+
+  const getRepoData = () => {
+
+    fetch("/api/gitHubRepo", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+      body: JSON.stringify({
+        owner,
+        repo,
+      }),
+    })
+      .then((data) => data.json())
+      .then((data) => {
+       
+        setProjectData({...data});
+      })
+      .catch((error) => {
         console.error(`Fetch error:`, error);
-        });
+      });
+  };
 
+  useEffect(getRepoData, [projectData]);
 
-    }
-   
-   
-    // fetch('/api/pokemon')
-        // .then(data => data.json())
-    // .then(data => {
+  // fetch('/api/pokemon')
+  // .then(data => data.json())
+  // .then(data => {
 
-    //     console.log(`made it from the back with data: ${data}`);
-    // })
-    // .catch(error => {
-    //     console.error(`Fetch error:`, error);
-    //   });
+  //     console.log(`made it from the back with data: ${data}`);
+  // })
+  // .catch(error => {
+  //     console.error(`Fetch error:`, error);
+  //   });
 
-    // Placeholder until you can figure out how to store data and retreive it
-    // When ready, need to move logic to the server and have the server make calls to database and send data back here
-
-    const projectData = data.get(projectNum);
-
-    console.log('within Project component')
-    console.log({projectNum, projectData});
-
-    return(
-        <>
-        <h1>Project {projectNum}</h1>
-        <h2>Project Descrption {projectData.description}</h2>
-        <h2>Tech Stack</h2>
+  if(!projectData){
+    return <h1>Loading</h1>
+  }
+    return (
+      <>
+        <h1>Project: {staticData.projectName}</h1>
+        <h2>Project Description: {(projectData as ProjectData).description}</h2>
         <h2>Placeholder for picture or video</h2>
+        <h2>Tech Stack</h2>
         <ul>
-        {projectData.tech_stack.map((tech: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined) => <li key={`${tech}1`}>{tech}</li>)}
+          {/* Language */}
+
+          {/* Core Teck */}
+
+          {staticData.tech_stack.map(
+            (tech:TechSack) => (
+              <li key={`${tech}${Math.random()}`}>{tech}</li>
+            )
+          )}
         </ul>
-        <button onClick={() => (handleProject(-1, data.size))}>Previous Project</button>
-        <button onClick={() => (handleProject(1, data.size))}>Next Project</button>
-        <button onClick={getRepoData}>Git Data</button>
-        </>
-    )
-}
+        <button onClick={() => handleProject(-1, data.size)}>
+          Previous Project
+        </button>
+        <button onClick={() => handleProject(1, data.size)}>
+          Next Project
+        </button>
+      </>
+    );
+  }
+
