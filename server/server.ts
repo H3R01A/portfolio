@@ -1,4 +1,5 @@
 import express from 'express';
+import {Request, Response, NextFunction} from 'express';
 import dotenv from 'dotenv';
 import path from 'path';
 import cors from 'cors';
@@ -38,8 +39,20 @@ app.get('/api/pokemon', (req, res) => {
 })
 
 
-app.listen(port, () => {
+app.use((err: Error, req: Request, res: Response, next:NextFunction) => {
+    const defaultErr = {
+      log: "Express error handler caught unknown middleware error",
+      status: 400,
+      message: { err: "An error occurred" },
+    };
+    const errorObj = Object.assign(defaultErr, err);
+    console.log(errorObj.log);
+    return res.status(errorObj.status).json(errorObj.message);
+  });
+
+  app.listen(port, () => {
 
     console.log(`Listening on port ${port}`);
 })
+
 
