@@ -1,48 +1,53 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  mode: "development", //"development" | "production"
+  mode: 'development', //"development" | "production"
   entry: {
-    src: "./client/index.tsx",
+    src: './client/index.tsx',
   },
   output: {
-    filename: "bundle.js",
-    path: path.resolve(__dirname, "build"),
-    publicPath: "/",
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'build'),
+    publicPath: '/',
   },
   module: {
     rules: [
       {
         test: /\.tsx?$/,
-        use: "ts-loader",
+        use: 'ts-loader',
         exclude: [/node_modules/],
       },
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        use:{
-          loader: "babel-loader",
+        use: {
+          loader: 'babel-loader',
           options: {
-            presets: ["@babel/env", "@babel/react"],
-          }
+            presets: ['@babel/env', '@babel/react'],
+          },
         },
-       
       },
       {
         test: /\.s?css/,
-        use: ["style-loader", "css-loader", "sass-loader"],
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: {
+          loader: 'file-loader',
+        },
       },
     ],
   },
   resolve: {
-    extensions: [".js", ".jsx", ".ts", ".tsx", ".json", ".css", ".scss"],
-    modules: ["frontend", "node_modules"],
+    extensions: ['.js', '.jsx', '.ts', '.tsx', '.json', '.css', '.scss'],
+    modules: ['frontend', 'node_modules'],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Development",
-      template: "index.html",
+      title: 'Development',
+      template: 'index.html',
     }),
   ],
   devServer: {
@@ -57,7 +62,7 @@ module.exports = {
       // match the output path
       directory: path.resolve(__dirname, 'dist'),
       // match the output 'publicPath'
-      publicPath: '/'
+      publicPath: '/',
     },
 
     headers: { 'Access-Control-Allow-Origin': '*' },
@@ -70,12 +75,12 @@ module.exports = {
     proxy: {
       '/api': {
         target: 'http://localhost:3000/',
-        secure: false
+        secure: false,
       },
       '/assets/**': {
         target: 'http://localhost:3000/',
-        secure: false
-      }
-    }
+        secure: false,
+      },
+    },
   },
 };
