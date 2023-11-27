@@ -1,5 +1,5 @@
 import { ReactNode, useEffect, useState } from 'react';
-import data from '../data';
+import data from '../assets/data';
 
 type ProjectProps = {
   projectNum: number;
@@ -63,7 +63,6 @@ export default function Project({ projectNum, handleProject }: ProjectProps) {
           Project Description:
           {(projectData as ProjectData).gitHubRepoData.description}
         </h2>
-        <h2>Placeholder for picture or video</h2>
         <h3>Languages Used</h3>
         <ul>
           {Object.keys((projectData as ProjectData).gitHubRepoLanguages).map(
@@ -84,6 +83,8 @@ export default function Project({ projectNum, handleProject }: ProjectProps) {
         <button onClick={() => handleProject(1, data.size)}>
           Next Project
         </button>
+        <h3>Images(if available)</h3>
+        <img src={staticData.picture}></img>
       </>
     );
   }
