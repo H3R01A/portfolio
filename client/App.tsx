@@ -38,16 +38,15 @@ export default function App(){
    }
     return (
         <>
+        <Link to="/">Home</Link>
+        <br></br>
+        <Link to="/about">About</Link>
         <Routes>
         <Route path="/" element={<WelcomePage/>}></Route>
         <Route path="/about" element={<AboutPage/>}/>
         <Route path='/project' element={<Project projectNum = {projectNum} handleProject = {handleProject}/>}/>
-
         </Routes>
-        <br></br>
-        <Link to="/">Home</Link>
-        <br></br>
-        <Link to="/about">About</Link>
+        
         </>
     )
 }
