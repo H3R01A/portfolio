@@ -60,8 +60,7 @@ export default function Project({ projectNum, handleProject }: ProjectProps) {
       <>
         <h1>Project: {staticData.projectName}</h1>
         <h2>
-          Project Description:
-          {(projectData as ProjectData).gitHubRepoData.description}
+          Project Description: {(projectData as ProjectData).gitHubRepoData.description}
         </h2>
         <h3>Languages Used</h3>
         <ul>
@@ -84,7 +83,7 @@ export default function Project({ projectNum, handleProject }: ProjectProps) {
           Next Project
         </button>
         <h3>Images(if available)</h3>
-        <img src={staticData.picture}></img>
+        {staticData.pictures.map((picture: string) => <img src={picture} key={`${picture}${Math.random()}`}></img>)}
       </>
     );
   }
