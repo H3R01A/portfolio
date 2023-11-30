@@ -28,21 +28,25 @@ module.exports = {
           },
         },
       },
-      {
-        test: /\.s?css/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
-      },
+      // {
+      //   test: /\.s?css/,
+      //   use: ['style-loader', 'css-loader', 'sass-loader'],
+      // },
       {
         test: /\.(png|jpe?g|gif)$/i,
         use: {
           loader: 'file-loader',
         },
       },
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader', 'postcss-loader'],
+      },
     ],
   },
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.json', '.css', '.scss'],
-    modules: ['frontend', 'node_modules'],
+    modules: ['client', 'node_modules'],
   },
   plugins: [
     new HtmlWebpackPlugin({
