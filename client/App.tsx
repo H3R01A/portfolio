@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import AboutPage from './components/AboutPage';
 import WelcomePage from "./components/WelcomePage";
-import Project from './components/Project'
+import Project from './components/Project';
 import {
    Routes,
    Route,
