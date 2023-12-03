@@ -38,9 +38,12 @@ export default function App(){
    }
     return (
         <>
-        <Link to="/">Home</Link>
+        <div className="bg-red-600">
+        {/* <p className='text-blue-100'>Home</p> */}
+        <Link to="/" className="font-bold">Home</Link>
         <br></br>
-        <Link to="/about">About</Link>
+        <Link to="/about" className="font-bold">About</Link>
+        </div>
         <Routes>
         <Route path="/" element={<WelcomePage/>}></Route>
         <Route path="/about" element={<AboutPage/>}/>
