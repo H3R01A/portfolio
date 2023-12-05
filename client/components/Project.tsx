@@ -84,13 +84,13 @@ export default function Project({ projectNum, handleProject }: ProjectProps) {
           Next Project
         </button>
         <h3>Images(if available)</h3>
-        <div className="flex flex-wrap space-x-2">
+        <div className="flex justify-evenly flex-wrap space-x-0.5">
           {staticData.pictures.map((picture: string) => (
             <div >
               <img
                 src={picture}
                 key={`${picture}${Math.random()}`}
-                className='w-200'
+                className='w-200 mt-1'
               ></img>
             </div>
           ))}
