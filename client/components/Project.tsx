@@ -58,12 +58,13 @@ export default function Project({ projectNum, handleProject }: ProjectProps) {
   } else {
     return (
       <>
-        <h1 className='text-red-500'>Project: {staticData.projectName}</h1>
+        <h1 className="text-3xl">Project: {staticData.projectName}</h1>
         <h2>
-          Project Description: {(projectData as ProjectData).gitHubRepoData.description}
+          Project Description:{' '}
+          {(projectData as ProjectData).gitHubRepoData.description}
         </h2>
         <h3>Languages Used</h3>
-        <ul className='pl-5 list-disc'>
+        <ul className="pl-5 list-disc">
           {Object.keys((projectData as ProjectData).gitHubRepoLanguages).map(
             (lang) => (
               <li key={`${lang}${Math.random()}`}>{lang}</li>
@@ -71,7 +72,7 @@ export default function Project({ projectNum, handleProject }: ProjectProps) {
           )}
         </ul>
         <h3>Tech Stack</h3>
-        <ul className='pl-5 list-disc'>
+        <ul className="pl-5 list-disc">
           {staticData.tech_stack.map((tech: TechStackItem) => (
             <li key={`${tech}${Math.random()}`}>{tech}</li>
           ))}
@@ -83,7 +84,17 @@ export default function Project({ projectNum, handleProject }: ProjectProps) {
           Next Project
         </button>
         <h3>Images(if available)</h3>
-        {staticData.pictures.map((picture: string) => <img src={picture} key={`${picture}${Math.random()}`}></img>)}
+        <div className="flex flex-wrap space-x-2">
+          {staticData.pictures.map((picture: string) => (
+            <div >
+              <img
+                src={picture}
+                key={`${picture}${Math.random()}`}
+                className='w-200'
+              ></img>
+            </div>
+          ))}
+        </div>
       </>
     );
   }
