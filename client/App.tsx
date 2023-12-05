@@ -38,10 +38,9 @@ export default function App(){
    }
     return (
         <>
-        <div className="bg-red-600">
+        <div className="bg-xanadu-50">
         {/* <p className='text-blue-100'>Home</p> */}
-        <Link to="/" className="font-bold">Home</Link>
-        <br></br>
+        <Link to="/" className="font-bold m-10">Home</Link>
         <Link to="/about" className="font-bold">About</Link>
         </div>
         <Routes>
