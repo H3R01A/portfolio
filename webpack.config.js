@@ -34,9 +34,7 @@ module.exports = {
       // },
       {
         test: /\.(png|jpe?g|gif)$/i,
-        use: {
-          loader: 'file-loader',
-        },
+        type: 'asset/resource',
       },
       {
         test: /\.css$/i,
@@ -63,9 +61,7 @@ module.exports = {
     historyApiFallback: true,
 
     static: {
-      // match the output path
-      directory: path.resolve(__dirname, 'dist'),
-      // match the output 'publicPath'
+      directory: path.join(__dirname, 'build'),
       publicPath: '/',
     },
 
@@ -82,7 +78,7 @@ module.exports = {
         secure: false,
       },
       '/assets/**': {
-        target: 'http://localhost:3000/',
+        target: 'http://localhost:8080/',
         secure: false,
       },
     },
