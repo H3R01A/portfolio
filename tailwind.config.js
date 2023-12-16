@@ -2,8 +2,15 @@
 module.exports = {
   content: ['./client/**/*.{js,jsx,ts,tsx}', './**/*.html'],
   theme: {
-    fontFamily: {
-      serif: ['Orbitron'],
+    fontSize: {
+      portfolio: [
+        '1.875rem',
+        {
+          lineHeight: '1rem',
+          letterSpacing: '0.075rem',
+          fontWeight: '700',
+        },
+      ],
     },
     extend: {
       colors: {
@@ -27,12 +34,14 @@ module.exports = {
           400: '#FFD889',
         },
       },
+
       spacing: {
         200: '50rem',
       },
       backgroundImage: {
         'background-pattern': "url('/client/assets/portfolio-background.png')",
-        'header-pattern': "url('/client/assets/portfolio-header-background.png')"
+        'header-pattern':
+          "url('/client/assets/portfolio-header-background.png')",
       },
     },
   },
