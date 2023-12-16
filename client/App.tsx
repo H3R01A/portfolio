@@ -33,7 +33,7 @@ export default function App() {
   };
   return (
     <>
-      <div className="bg-header-pattern p-10 flex justify-evenly">
+      <div className="bg-header-pattern bg-center p-10 font-['Inter'] uppercase text-white flex justify-evenly">
         {/* <p className='text-blue-100'>Home</p> */}
         <Link to="/" className="font-bold">
           Home
