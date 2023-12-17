@@ -28,12 +28,10 @@ export default function App() {
     // }
 
     // return num + projectNum > 0 ? setProjectNum(num + projectNum) : setProjectNum(1);
-
-    //bg-herotheme-300 opacity-95
   };
   return (
     <>
-      <div className="bg-header-pattern bg-center p-10 font-['Inter'] uppercase text-white flex justify-evenly">
+      <div className="bg-header-pattern bg-center p-10 uppercase text-heroTheme-500 flex justify-center space-x-3">
         {/* <p className='text-blue-100'>Home</p> */}
         <Link to="/" className="font-bold">
           Home
