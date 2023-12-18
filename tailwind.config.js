@@ -2,6 +2,9 @@
 module.exports = {
   content: ['./client/**/*.{js,jsx,ts,tsx}', './**/*.html'],
   theme: {
+    fontFamily: {
+      buttonText: ['Orbitron', 'system-ui', 'sans-serif'],
+    },
     fontSize: {
       portfolio: [
         '1.875rem',
@@ -27,11 +30,12 @@ module.exports = {
           900: '#30332e',
           950: '#191b18',
         },
-        herotheme: {
+        heroTheme: {
           100: '#D9E5DB',
           200: '#6E756F',
           300: '#2E3E30',
           400: '#FFD889',
+          500: '#CAD7CC',
         },
       },
 
