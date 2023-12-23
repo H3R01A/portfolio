@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import AboutPage from './components/AboutPage';
+import ContactPage from './components/ContactPage';
 import WelcomePage from './components/WelcomePage';
 import Project from './components/Project';
 import { Routes, Route, Link } from 'react-router-dom';
@@ -25,13 +25,13 @@ export default function App() {
         <Link to="/project" className="font-bold">
           Projects
         </Link>
-        <Link to="/about" className="font-bold">
-          About
+        <Link to="/contact" className="font-bold">
+          Contact
         </Link>
       </div>
       <Routes>
         <Route path="/" element={<WelcomePage />}></Route>
-        <Route path="/about" element={<AboutPage />} />
+        <Route path="/contact" element={<ContactPage />} />
         <Route
           path="/project"
           element={

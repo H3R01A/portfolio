@@ -19,7 +19,7 @@ type TechStackItem = string | number | boolean | ReactNode;
 
 export default function Project({ projectNum, handleProject }: ProjectProps) {
   if (projectNum > data.size) {
-    window.location.assign('/about');
+    window.location.assign('/contact');
     return (
       <div>
         <h1>Loading</h1>

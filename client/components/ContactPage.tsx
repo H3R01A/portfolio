@@ -1,12 +1,15 @@
 import { Link } from 'react-router-dom';
 
-export default function AboutPage() {
+export default function ContactPage() {
   return (
     <div className="flex items-center justify-center flex-wrap">
-      <h1 className="w-full uppercase text-3xl flex items-center justify-center mt-12">
-        It's dangerous to go into the world of web development alone. Take this and contact me!
+      <h1 className="w-full uppercase text-3xl flex items-center justify-center mt-40">
+        It's dangerous to go into the world of web development alone.
       </h1>
-      <h2 className="w-full text-3xl flex items-center justify-center mt-10">
+      <h1 className="w-full uppercase text-3xl flex items-center justify-center">
+        Take this!
+      </h1>
+      <h2 className="w-full text-3xl flex items-center justify-center mt-32">
         Name: Aaron Allen
       </h2>
       <h2 className="w-full text-3xl flex items-center justify-center mt-4">
