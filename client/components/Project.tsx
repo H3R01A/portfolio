@@ -54,16 +54,28 @@ export default function Project({ projectNum, handleProject }: ProjectProps) {
   }, [projectNum]);
 
   if (!(projectData as ProjectData).gitHubRepoData?.name) {
-    return <h1>Loading</h1>;
-  } else {
     return (
-      <>
-        <h1 className="text-3xl">Project: {staticData.projectName}</h1>
-        <h2>
-          Project Description:{' '}
-          {(projectData as ProjectData).gitHubRepoData.description}
-        </h2>
-        <h3>Languages Used</h3>
+      <div>
+        <h1>Loading</h1>
+      </div>
+    );
+  } else {
+    //
+    return (
+      <div className="flex items-center justify-center flex-wrap">
+        <div className="w-full text-3xl flex items-center justify-center mt-12">
+          <h1>Project: {staticData.projectName}</h1>
+        </div>
+        <div className="w-full flex items-center justify-center mt-4">
+          <h2>
+            <p className='font-bold w-full flex items-center justify-center'>Project Description: </p>
+            {(projectData as ProjectData).gitHubRepoData.description}
+          </h2>
+        </div>
+        <h3 className="w-full flex items-center justify-center mt-4 font-bold">
+          Languages Used:
+        </h3>
+        <div className='w-full flex items-center justify-center'>
         <ul className="pl-5 list-disc">
           {Object.keys((projectData as ProjectData).gitHubRepoLanguages).map(
             (lang) => (
@@ -71,31 +83,42 @@ export default function Project({ projectNum, handleProject }: ProjectProps) {
             )
           )}
         </ul>
-        <h3>Tech Stack</h3>
+        </div>
+        <h3 className="w-full flex items-center justify-center mt-4 font-bold">Tech Used:</h3>
+        <div className='w-full flex items-center justify-center'>
         <ul className="pl-5 list-disc">
           {staticData.tech_stack.map((tech: TechStackItem) => (
             <li key={`${tech}${Math.random()}`}>{tech}</li>
           ))}
         </ul>
-        <button onClick={() => handleProject(-1, data.size)}>
+        </div>
+        <div className='w-full flex items-center justify-center mt-4 space-x-4'>
+        <button
+          onClick={() => handleProject(-1, data.size)}
+          className="bg-heroTheme-400 text-heroTheme-300 inline-flex px-7 py-3.5 text-portfolioBTN uppercase font-serounded-lg text-center text-shadow font-buttonText border-t-[.3px] border-l-[.3px] border-r-[3px] border-b-[3px] shadow-[4px_4px_4.8px_0px_rgba(0,0,0,0.2)] border-heroTheme-300 rounded-md"
+        >
           Previous Project
         </button>
-        <button onClick={() => handleProject(1, data.size)}>
+        <button
+          onClick={() => handleProject(1, data.size)}
+          className="bg-heroTheme-400 text-heroTheme-300 inline-flex px-7 py-3.5 text-portfolioBTN uppercase font-serounded-lg text-center text-shadow font-buttonText border-t-[.3px] border-l-[.3px] border-r-[3px] border-b-[3px] shadow-[4px_4px_4.8px_0px_rgba(0,0,0,0.2)] border-heroTheme-300 rounded-md"
+        >
           Next Project
         </button>
-        <h3>Images(if available)</h3>
+        </div>
+        <h3 className='mt-4 italic w-full flex items-center justify-center'>Images (if available)</h3>
         <div className="flex justify-evenly flex-wrap space-x-0.5">
           {staticData.pictures.map((picture: string) => (
-            <div >
+            <div>
               <img
                 src={picture}
                 key={`${picture}${Math.random()}`}
-                className='w-200 mt-1'
+                className="w-200 mt-1"
               ></img>
             </div>
           ))}
         </div>
-      </>
+      </div>
     );
   }
 }
