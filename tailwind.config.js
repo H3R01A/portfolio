@@ -5,16 +5,6 @@ module.exports = {
     fontFamily: {
       buttonText: ['Orbitron', 'system-ui', 'sans-serif'],
     },
-    fontSize: {
-      portfolio: [
-        '1.875rem',
-        {
-          lineHeight: '1rem',
-          letterSpacing: '0.075rem',
-          fontWeight: '700',
-        },
-      ],
-    },
     extend: {
       colors: {
         xanadu: {
@@ -38,7 +28,24 @@ module.exports = {
           500: '#CAD7CC',
         },
       },
-
+      fontSize: {
+        portfolioNG: [
+          '1.5rem',
+          {
+            lineHeight: '1rem',
+            letterSpacing: '0.075rem',
+            fontWeight: '700',
+          },
+        ],
+        portfolioBTN: [
+          '1rem',
+          {
+            lineHeight: '1rem',
+            letterSpacing: '0.075rem',
+            fontWeight: '700',
+          },
+        ]
+      },
       spacing: {
         200: '50rem',
       },
