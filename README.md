@@ -2,7 +2,7 @@
 
 Portfolio web app for my projects
 
-## How to build and delploy heroku
+## How to build and deploy heroku
 
 Make final changes and run git commit
 
