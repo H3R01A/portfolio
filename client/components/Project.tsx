@@ -1,4 +1,5 @@
 import { ReactNode, useEffect, useState } from 'react';
+import { Navigate} from 'react-router-dom';
 import data from '../assets/data';
 
 type ProjectProps = {
@@ -18,13 +19,9 @@ type ProjectData = {
 type TechStackItem = string | number | boolean | ReactNode;
 
 export default function Project({ projectNum, handleProject }: ProjectProps) {
+
   if (projectNum > data.size) {
-    window.location.assign('/contact');
-    return (
-      <div>
-        <h1>Loading</h1>
-      </div>
-    );
+    return <Navigate to="/contact" />
   }
 
   const staticData = data.get(projectNum);
