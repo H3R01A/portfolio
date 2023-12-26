@@ -8,7 +8,16 @@ Border is a one off because only need width side for one button
 
 */
 
-export default function WelcomePage() {
+type WelcomeProps = {
+  
+  setProjectNum: (num: number) => void;
+};
+
+
+export default function WelcomePage({ setProjectNum}: WelcomeProps) {
+
+  setProjectNum(1);
+  
   return (
     <>
       <section className="text-center">
