@@ -30,7 +30,7 @@ export default function App() {
         </Link>
       </div>
       <Routes>
-        <Route path="/" element={<WelcomePage />}></Route>
+        <Route path="/" element={<WelcomePage setProjectNum = {setProjectNum}/>}></Route>
         <Route path="/contact" element={<ContactPage />} />
         <Route
           path="/project"
