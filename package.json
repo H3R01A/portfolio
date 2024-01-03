@@ -9,7 +9,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack serve --open & nodemon server/server.ts",
-    "tailwind": "npx tailwindcss -i ./client/styles.css -o ./build/output.css --watch",
+    "tailwind": "npx tailwindcss -i ./client/styles.css -o ./client/output.css --watch",
     "start": "ts-node --transpile-only server/server.ts",
     "build": "webpack --config ./webpack.config.js --mode='production'",
     "heroku-postbuild": "webpack --config ./webpack.config.js --mode='production'"
