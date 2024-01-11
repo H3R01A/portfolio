@@ -1,5 +1,5 @@
 import { ReactNode, useEffect, useState } from 'react';
-import { Navigate} from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import data from '../assets/data';
 
 type ProjectProps = {
@@ -19,9 +19,8 @@ type ProjectData = {
 type TechStackItem = string | number | boolean | ReactNode;
 
 export default function Project({ projectNum, handleProject }: ProjectProps) {
-
   if (projectNum > data.size) {
-    return <Navigate to="/contact" />
+    return <Navigate to="/contact" />;
   }
 
   const staticData = data.get(projectNum);
@@ -68,20 +67,21 @@ export default function Project({ projectNum, handleProject }: ProjectProps) {
   } else {
     //
     return (
-      <div className="flex items-center justify-center flex-wrap">
-        <div className="w-full text-3xl flex items-center justify-center mt-12">
+      <div className="flex flex-wrap items-center justify-center">
+        <div className="mt-12 flex w-full items-center justify-center text-3xl">
           <h1>Project: {staticData.projectName}</h1>
         </div>
-        <div className="w-full flex items-center justify-center mt-4">
-          <h2 className="font-bold text-xl w-full flex items-center justify-center">
-            Project Description: {(projectData as ProjectData).gitHubRepoData.description}
+        <div className="mt-4 flex w-full items-center justify-center">
+          <h2 className="flex w-full items-center justify-center text-xl font-bold">
+            Project Description:{' '}
+            {(projectData as ProjectData).gitHubRepoData.description}
           </h2>
         </div>
-        <h3 className="w-full text-xl flex items-center justify-center mt-4">
+        <h3 className="mt-4 flex w-full items-center justify-center text-xl">
           Languages Used:
         </h3>
-        <div className="w-full flex items-center justify-center">
-          <ul className="pl-5 list-disc">
+        <div className="flex w-full items-center justify-center">
+          <ul className="list-disc pl-5">
             {Object.keys((projectData as ProjectData).gitHubRepoLanguages).map(
               (lang) => (
                 <li key={`${lang}${Math.random()}`}>{lang}</li>
@@ -89,40 +89,40 @@ export default function Project({ projectNum, handleProject }: ProjectProps) {
             )}
           </ul>
         </div>
-        <h3 className="w-full text-xl flex items-center justify-center mt-4 font-bold">
+        <h3 className="mt-4 flex w-full items-center justify-center text-xl font-bold">
           Tech Used:
         </h3>
-        <div className="w-full flex items-center justify-center">
-          <ul className="pl-5 list-disc">
+        <div className="flex w-full items-center justify-center">
+          <ul className="list-disc pl-5">
             {staticData.tech_stack.map((tech: TechStackItem) => (
               <li key={`${tech}${Math.random()}`}>{tech}</li>
             ))}
           </ul>
         </div>
-        <div className="w-full flex items-center justify-center mt-4 space-x-4">
+        <div className="mt-4 flex w-full items-center justify-center space-x-4">
           <button
             onClick={() => handleProject(-1, data.size)}
-            className="bg-heroTheme-400 text-heroTheme-300 inline-flex px-7 py-3.5 text-portfolioBTN uppercase font-serounded-lg text-center text-shadow font-buttonText border-t-[.3px] border-l-[.3px] border-r-[3px] border-b-[3px] shadow-[4px_4px_4.8px_0px_rgba(0,0,0,0.2)] border-heroTheme-300 rounded-md"
+            className="font-serounded-lg text-shadow inline-flex rounded-md border-b-[3px] border-l-[.3px] border-r-[3px] border-t-[.3px] border-heroTheme-300 bg-heroTheme-400 px-7 py-3.5 text-center font-buttonText text-portfolioBTN uppercase text-heroTheme-300 shadow-[4px_4px_4.8px_0px_rgba(0,0,0,0.2)]"
           >
             Previous Project
           </button>
           <button
             onClick={() => handleProject(1, data.size)}
-            className="bg-heroTheme-400 text-heroTheme-300 inline-flex px-7 py-3.5 text-portfolioBTN uppercase font-serounded-lg text-center text-shadow font-buttonText border-t-[.3px] border-l-[.3px] border-r-[3px] border-b-[3px] shadow-[4px_4px_4.8px_0px_rgba(0,0,0,0.2)] border-heroTheme-300 rounded-md"
+            className="font-serounded-lg text-shadow inline-flex rounded-md border-b-[3px] border-l-[.3px] border-r-[3px] border-t-[.3px] border-heroTheme-300 bg-heroTheme-400 px-7 py-3.5 text-center font-buttonText text-portfolioBTN uppercase text-heroTheme-300 shadow-[4px_4px_4.8px_0px_rgba(0,0,0,0.2)]"
           >
             Next Project
           </button>
         </div>
-        <h3 className="mt-4 italic w-full flex items-center justify-center">
+        <h3 className="mt-4 flex w-full items-center justify-center italic">
           Images (if available)
         </h3>
-        <div className="flex justify-evenly flex-wrap space-x-0.5">
+        <div className="flex flex-wrap justify-evenly space-x-0.5">
           {staticData.pictures.map((picture: string) => (
             <div>
               <img
                 src={picture}
                 key={`${picture}${Math.random()}`}
-                className="w-200 mt-1"
+                className="mt-1 w-200"
               ></img>
             </div>
           ))}
