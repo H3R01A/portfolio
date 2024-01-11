@@ -596,6 +596,10 @@ html {
   margin-top: 20rem;
 }
 
+.block {
+  display: block;
+}
+
 .flex {
   display: flex;
 }
@@ -618,6 +622,15 @@ html {
 
 .list-disc {
   list-style-type: disc;
+}
+
+.break-before-column {
+  -moz-column-break-before: column;
+       break-before: column;
+}
+
+.flex-col {
+  flex-direction: column;
 }
 
 .flex-wrap {
@@ -802,4 +815,41 @@ html {
 
 .text-shadow {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.hover\:border-b-\[3px\]:hover {
+  border-bottom-width: 3px;
+}
+
+.hover\:border-l-\[\.3px\]:hover {
+  border-left-width: .3px;
+}
+
+.hover\:border-r-\[3px\]:hover {
+  border-right-width: 3px;
+}
+
+.hover\:border-t-\[\.3px\]:hover {
+  border-top-width: .3px;
+}
+
+.hover\:border-heroTheme-300:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(46 62 48 / var(--tw-border-opacity));
+}
+
+.hover\:bg-heroTheme-400:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 216 137 / var(--tw-bg-opacity));
+}
+
+.hover\:text-red-500:hover {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
+}
+
+.hover\:shadow-\[4px_4px_4\.8px_0px_rgba\(0\2c 0\2c 0\2c 0\.2\)\]:hover {
+  --tw-shadow: 4px 4px 4.8px 0px rgba(0,0,0,0.2);
+  --tw-shadow-colored: 4px 4px 4.8px 0px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
