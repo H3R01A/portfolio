@@ -9,21 +9,28 @@ Border is a one off because only need width side for one button
 */
 
 type WelcomeProps = {
-  
   setProjectNum: (num: number) => void;
 };
 
-
-export default function WelcomePage({ setProjectNum}: WelcomeProps) {
-
+export default function WelcomePage({ setProjectNum }: WelcomeProps) {
   setProjectNum(1);
-  
+
   return (
     <>
-      <section className="text-center">
+      <section className="flex flex-col text-center">
         <Link to="/project">
-          <button className="bg-heroTheme-400 text-heroTheme-300 inline-flex mt-80 px-7 py-3.5 text-portfolioNG uppercase font-serounded-lg text-center text-shadow font-buttonText border-t-[.3px] border-l-[.3px] border-r-[3px] border-b-[3px] shadow-[4px_4px_4.8px_0px_rgba(0,0,0,0.2)] border-heroTheme-300 rounded-md">
+          <button className="font-serounded-lg text-shadow mt-80 rounded-md px-7 py-3.5 text-center font-buttonText text-portfolioNG uppercase text-heroTheme-300 hover:border-b-[3px] hover:border-l-[.3px] hover:border-r-[3px] hover:border-t-[.3px] hover:border-heroTheme-300 hover:bg-heroTheme-400 hover:shadow-[4px_4px_4.8px_0px_rgba(0,0,0,0.2)]">
             New Game
+          </button>
+        </Link>
+        <Link to="/about">
+          <button className="font-serounded-lg text-shadow rounded-md px-7 py-3.5 text-center font-buttonText text-portfolioNG uppercase text-heroTheme-300 hover:border-b-[3px] hover:border-l-[.3px] hover:border-r-[3px] hover:border-t-[.3px] hover:border-heroTheme-300 hover:bg-heroTheme-400 hover:shadow-[4px_4px_4.8px_0px_rgba(0,0,0,0.2)]">
+            About
+          </button>
+        </Link>
+        <Link to="/contact">
+        <button className="font-serounded-lg text-shadow rounded-md px-7 py-3.5 text-center font-buttonText text-portfolioNG uppercase text-heroTheme-300 hover:border-b-[3px] hover:border-l-[.3px] hover:border-r-[3px] hover:border-t-[.3px] hover:border-heroTheme-300 hover:bg-heroTheme-400 hover:shadow-[4px_4px_4.8px_0px_rgba(0,0,0,0.2)]">
+            Contact
           </button>
         </Link>
       </section>
