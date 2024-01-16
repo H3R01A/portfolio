@@ -50,7 +50,7 @@ module.exports = {
         200: '50rem',
       },
       backgroundImage: {
-        'background-pattern': "url('/client/assets/portfolio-background.png')",
+        'background-pattern': "url('/client/assets/black-glitch-bg.png')",
         'header-pattern':
           "url('/client/assets/portfolio-header-background.png')",
       },
