@@ -613,10 +613,6 @@ body {
   display: inline;
 }
 
-.block {
-  display: block;
-}
-
 .flex {
   display: flex;
 }
@@ -641,9 +637,8 @@ body {
   list-style-type: disc;
 }
 
-.break-before-column {
-  -moz-column-break-before: column;
-       break-before: column;
+.flex-col {
+  flex-direction: column;
 }
 
 .flex-col {
@@ -747,8 +742,8 @@ body {
   background-position: center;
 }
 
-.bg-repeat {
-  background-repeat: repeat;
+.bg-no-repeat {
+  background-repeat: no-repeat;
 }
 
 .p-10 {
@@ -910,11 +905,6 @@ body {
 .hover\:text-black:hover {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
-}
-
-.hover\:text-red-500:hover {
-  --tw-text-opacity: 1;
-  color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
 .hover\:shadow-\[4px_4px_4\.8px_0px_rgba\(0\2c 0\2c 0\2c 0\.2\)\]:hover {
