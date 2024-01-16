@@ -435,7 +435,12 @@ video {
 }
 
 html {
-  font-family: "Inter", system-ui, sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
+  height: 100%;
+}
+
+body {
+  height: 100%;
 }
 
 *, ::before, ::after {
@@ -596,10 +601,6 @@ html {
   margin-top: 20rem;
 }
 
-.block {
-  display: block;
-}
-
 .flex {
   display: flex;
 }
@@ -622,11 +623,6 @@ html {
 
 .list-disc {
   list-style-type: disc;
-}
-
-.break-before-column {
-  -moz-column-break-before: column;
-       break-before: column;
 }
 
 .flex-col {
@@ -659,12 +655,6 @@ html {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.125rem * var(--tw-space-x-reverse));
   margin-left: calc(0.125rem * calc(1 - var(--tw-space-x-reverse)));
-}
-
-.space-x-12 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(3rem * var(--tw-space-x-reverse));
-  margin-left: calc(3rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .space-x-4 > :not([hidden]) ~ :not([hidden]) {
@@ -704,15 +694,19 @@ html {
 }
 
 .bg-background-pattern {
-  background-image: url('/client/assets/portfolio-background.png');
+  background-image: url('/client/assets/black-glitch-bg.png');
 }
 
-.bg-header-pattern {
-  background-image: url('/client/assets/portfolio-header-background.png');
+.bg-cover {
+  background-size: cover;
 }
 
 .bg-center {
   background-position: center;
+}
+
+.bg-no-repeat {
+  background-repeat: no-repeat;
 }
 
 .p-10 {
@@ -841,11 +835,6 @@ html {
 .hover\:bg-heroTheme-400:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(255 216 137 / var(--tw-bg-opacity));
-}
-
-.hover\:text-red-500:hover {
-  --tw-text-opacity: 1;
-  color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
 .hover\:shadow-\[4px_4px_4\.8px_0px_rgba\(0\2c 0\2c 0\2c 0\.2\)\]:hover {
