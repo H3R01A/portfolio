@@ -14,7 +14,7 @@ export default function App() {
   };
   return (
     <>
-      <div className="bg-header-pattern bg-center p-10 uppercase text-heroTheme-500">
+      <div className="p-10 uppercase text-heroTheme-500">
         {/* <p className='text-blue-100'>Home</p> */}
         <Link to="/" className="font-bold">
           Home
