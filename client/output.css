@@ -577,6 +577,14 @@ body {
   }
 }
 
+.m-20 {
+  margin: 5rem;
+}
+
+.m-72 {
+  margin: 18rem;
+}
+
 .mt-1 {
   margin-top: 0.25rem;
 }
