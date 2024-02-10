@@ -67,8 +67,8 @@ export default function Project({ projectNum, handleProject }: ProjectProps) {
   } else {
     //
     return (
-      <div className="flex flex-wrap items-center justify-center">
-        <div className="mt-12 flex w-full items-center justify-center text-3xl">
+      <div className="flex flex-wrap items-center justify-center text-white ">
+        <div className="mt-12 flex w-full items-center justify-center text-3xl ">
           <h1>Project: {staticData.projectName}</h1>
         </div>
         <div className="mt-4 flex w-full items-center justify-center">
@@ -102,13 +102,13 @@ export default function Project({ projectNum, handleProject }: ProjectProps) {
         <div className="mt-4 flex w-full items-center justify-center space-x-4">
           <button
             onClick={() => handleProject(-1, data.size)}
-            className="font-serounded-lg text-shadow inline-flex rounded-md border-b-[3px] border-l-[.3px] border-r-[3px] border-t-[.3px] border-heroTheme-300 bg-heroTheme-400 px-7 py-3.5 text-center font-buttonText text-portfolioBTN uppercase text-heroTheme-300 shadow-[4px_4px_4.8px_0px_rgba(0,0,0,0.2)]"
+            className="font-serounded-lg text-shadow rounded-md px-7 py-3.5 text-center font-buttonText text-portfolioNG uppercase text-white hover:animate-pulse hover:border-b-[3px] hover:border-l-[.3px] hover:border-r-[3px] hover:border-t-[.3px] hover:border-heroTheme-300 hover:bg-emerald-500 hover:text-black hover:shadow-[4px_4px_4.8px_0px_rgba(0,0,0,0.2)]"
           >
             Previous Project
           </button>
           <button
             onClick={() => handleProject(1, data.size)}
-            className="font-serounded-lg text-shadow inline-flex rounded-md border-b-[3px] border-l-[.3px] border-r-[3px] border-t-[.3px] border-heroTheme-300 bg-heroTheme-400 px-7 py-3.5 text-center font-buttonText text-portfolioBTN uppercase text-heroTheme-300 shadow-[4px_4px_4.8px_0px_rgba(0,0,0,0.2)]"
+            className="font-serounded-lg text-shadow rounded-md px-7 py-3.5 text-center font-buttonText text-portfolioNG uppercase text-white hover:animate-pulse hover:border-b-[3px] hover:border-l-[.3px] hover:border-r-[3px] hover:border-t-[.3px] hover:border-heroTheme-300 hover:bg-emerald-500 hover:text-black hover:shadow-[4px_4px_4.8px_0px_rgba(0,0,0,0.2)]"
           >
             Next Project
           </button>
