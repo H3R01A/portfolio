@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 export default function ContactPage() {
   return (
-    <div className="flex flex-wrap items-center justify-center border-heroTheme-300 text-white ">
+    <div className="flex flex-wrap items-center justify-center border-heroTheme-300 text-emerald-400 ">
       <h1 className="mt-40 flex w-full items-center justify-center text-3xl uppercase">
         It's dangerous to go into the world of web development alone.
       </h1>
