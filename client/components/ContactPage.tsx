@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom';
 
 export default function ContactPage() {
   return (
-    <div className="flex flex-wrap items-center justify-center border-heroTheme-300 text-emerald-400 ">
-      <h1 className="mt-40 flex w-full items-center justify-center text-3xl uppercase">
+    <div className="outline-title flex flex-wrap items-center justify-center border-heroTheme-300 text-white">
+      <h1 className="mt-24 flex w-full items-center justify-center text-3xl uppercase">
         It's dangerous to go into the world of web development alone.
       </h1>
       <h1 className="flex w-full items-center justify-center text-3xl uppercase">
@@ -19,7 +19,7 @@ export default function ContactPage() {
         Thanks for Visiting!
       </h3>
       <Link to="/">
-        <button className="font-serounded-lg text-shadow mt-6 rounded-md px-7 py-3.5 text-center font-buttonText text-portfolioNG uppercase text-white hover:animate-pulse hover:border-b-[3px] hover:border-l-[.3px] hover:border-r-[3px] hover:border-t-[.3px] hover:border-heroTheme-300 hover:bg-emerald-500 hover:text-black hover:shadow-[4px_4px_4.8px_0px_rgba(0,0,0,0.2)]">
+        <button className="font-serounded-lg outline-title text-shadow mt-6 rounded-md px-7 py-3.5 text-center font-buttonText text-portfolioNG uppercase text-white hover:animate-pulse hover:border-b-[3px] hover:border-l-[.3px] hover:border-r-[3px] hover:border-t-[.3px] hover:border-heroTheme-300 hover:bg-emerald-500 hover:text-black hover:shadow-[4px_4px_4.8px_0px_rgba(0,0,0,0.2)]">
           Back to Main Menu
         </button>
       </Link>
