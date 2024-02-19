@@ -1,7 +1,7 @@
 import { format } from 'prettier';
 import { Link } from 'react-router-dom';
 import { TypeAnimation } from 'react-type-animation';
-import linkedIN from '../assets/LI-Logo.png';
+import linkedIN from '../assets/LI-Logo-white.png';
 import github from '../assets/GitHub_Logo_White.png';
 
 export default function ContactPage() {
