@@ -717,13 +717,13 @@ body {
   border-color: rgb(46 62 48 / var(--tw-border-opacity));
 }
 
+.border-transparent {
+  border-color: transparent;
+}
+
 .border-white {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
-}
-
-.border-transparent {
-  border-color: transparent;
 }
 
 .bg-background-pattern {
@@ -742,16 +742,8 @@ body {
   background-repeat: repeat;
 }
 
-.bg-no-repeat {
-  background-repeat: no-repeat;
-}
-
 .p-10 {
   padding: 2.5rem;
-}
-
-.p-1 {
-  padding: 0.25rem;
 }
 
 .px-7 {
@@ -843,20 +835,8 @@ body {
   text-decoration-line: underline;
 }
 
-.decoration-sky-500 {
-  text-decoration-color: #0ea5e9;
-}
-
 .decoration-emerald-500 {
   text-decoration-color: #10b981;
-}
-
-.underline-offset-auto {
-  text-underline-offset: auto;
-}
-
-.underline-offset-4 {
-  text-underline-offset: 4px;
 }
 
 .shadow {
