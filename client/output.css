@@ -742,8 +742,8 @@ body {
   background-position: center;
 }
 
-.bg-no-repeat {
-  background-repeat: no-repeat;
+.bg-repeat {
+  background-repeat: repeat;
 }
 
 .p-10 {
