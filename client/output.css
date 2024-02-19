@@ -721,9 +721,13 @@ body {
   border-color: rgb(46 62 48 / var(--tw-border-opacity));
 }
 
-.bg-heroTheme-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 216 137 / var(--tw-bg-opacity));
+.border-transparent {
+  border-color: transparent;
+}
+
+.border-white {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
 .bg-background-pattern {
@@ -738,8 +742,8 @@ body {
   background-position: center;
 }
 
-.bg-no-repeat {
-  background-repeat: no-repeat;
+.bg-repeat {
+  background-repeat: repeat;
 }
 
 .p-10 {
@@ -824,7 +828,15 @@ body {
 
 .text-white {
   --tw-text-opacity: 1;
-  color: rgb(202 215 204 / var(--tw-text-opacity));
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.underline {
+  text-decoration-line: underline;
+}
+
+.decoration-emerald-500 {
+  text-decoration-color: #10b981;
 }
 
 .shadow {
