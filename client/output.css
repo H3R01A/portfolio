@@ -754,6 +754,10 @@ body {
   border-color: transparent;
 }
 
+.border-transparent {
+  border-color: transparent;
+}
+
 .border-white {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
@@ -773,8 +777,8 @@ body {
   background-position: center;
 }
 
-.bg-no-repeat {
-  background-repeat: no-repeat;
+.bg-repeat {
+  background-repeat: repeat;
 }
 
 .p-10 {
