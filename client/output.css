@@ -668,6 +668,10 @@ body {
   flex-direction: column;
 }
 
+.flex-col {
+  flex-direction: column;
+}
+
 .flex-wrap {
   flex-wrap: wrap;
 }
@@ -888,25 +892,6 @@ body {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.outline-title {
-  text-shadow:
-    1px 1px 0 #000,
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;
-}
-
-@keyframes pulse {
-  50% {
-    opacity: 0.5;
-  }
-}
-
-.hover\:animate-pulse:hover {
-  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
-
 .hover\:border-b-\[3px\]:hover {
   border-bottom-width: 3px;
 }
@@ -928,14 +913,9 @@ body {
   border-color: rgb(46 62 48 / var(--tw-border-opacity));
 }
 
-.hover\:bg-emerald-500:hover {
+.hover\:bg-heroTheme-400:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(16 185 129 / var(--tw-bg-opacity));
-}
-
-.hover\:text-black:hover {
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
+  background-color: rgb(255 216 137 / var(--tw-bg-opacity));
 }
 
 .hover\:shadow-\[4px_4px_4\.8px_0px_rgba\(0\2c 0\2c 0\2c 0\.2\)\]:hover {
@@ -943,8 +923,4 @@ body {
   --tw-shadow-colored: 4px 4px 4.8px 0px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
     var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.hover\:outline-title-none:hover {
-  text-shadow: none;
 }
