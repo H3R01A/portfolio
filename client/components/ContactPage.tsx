@@ -22,12 +22,12 @@ export default function ContactPage() {
         Email: aallen0001@gmail.com
       </h1>
       <div className="mt-8 flex flex-wrap items-center gap-x-6">
-        <div className="border border-white px-7 py-3.5">
+        <div>
           <a href="https://www.linkedin.com/in/aaronrallen/" target="_blank">
             <img src={linkedIN} alt="LinkedIn Logo" width="120" />
           </a>
         </div>
-        <div className="border border-white px-7 py-2">
+        <div >
           <a href="https://github.com/H3R01A" target="_blank">
             <img src={github} alt="LinkedIn Logo" width="100" />
           </a>
