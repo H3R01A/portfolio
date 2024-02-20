@@ -634,6 +634,10 @@ body {
   width: 100%;
 }
 
+.w-\[78rem\] {
+  width: 78rem;
+}
+
 .flex-none {
   flex: none;
 }
@@ -781,6 +785,10 @@ body {
 
 .indent-8 {
   text-indent: 2rem;
+}
+
+.indent-24 {
+  text-indent: 6rem;
 }
 
 .font-buttonText {
