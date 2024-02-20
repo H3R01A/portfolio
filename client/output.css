@@ -42,23 +42,9 @@ html {
   -moz-tab-size: 4;
   /* 3 */
   -o-tab-size: 4;
-  tab-size: 4;
+     tab-size: 4;
   /* 3 */
-  font-family:
-    ui-sans-serif,
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    'Noto Sans',
-    sans-serif,
-    'Apple Color Emoji',
-    'Segoe UI Emoji',
-    'Segoe UI Symbol',
-    'Noto Color Emoji';
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
@@ -99,7 +85,7 @@ Add the correct text decoration in Chrome, Edge, and Safari.
 
 abbr:where([title]) {
   -webkit-text-decoration: underline dotted;
-  text-decoration: underline dotted;
+          text-decoration: underline dotted;
 }
 
 /*
@@ -143,8 +129,7 @@ code,
 kbd,
 samp,
 pre {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-    'Liberation Mono', 'Courier New', monospace;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   /* 1 */
   font-size: 1em;
   /* 2 */
@@ -381,8 +366,7 @@ textarea {
 2. Set the default placeholder color to the user's configured gray 400 color.
 */
 
-input::-moz-placeholder,
-textarea::-moz-placeholder {
+input::-moz-placeholder, textarea::-moz-placeholder {
   opacity: 1;
   /* 1 */
   color: #9ca3af;
@@ -402,7 +386,7 @@ Set the default cursor for buttons.
 */
 
 button,
-[role='button'] {
+[role="button"] {
   cursor: pointer;
 }
 
@@ -457,17 +441,9 @@ html {
 
 body {
   height: 100%;
-  font-family: 'Inter', system-ui, sans-serif;
-  height: 100%;
 }
 
-body {
-  height: 100%;
-}
-
-*,
-::before,
-::after {
+*, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
   --tw-translate-x: 0;
@@ -630,16 +606,16 @@ body {
   margin-top: 1rem;
 }
 
-.mt-40 {
-  margin-top: 10rem;
-}
-
-.mt-80 {
-  margin-top: 20rem;
+.mt-8 {
+  margin-top: 2rem;
 }
 
 .block {
   display: block;
+}
+
+.inline {
+  display: inline;
 }
 
 .flex {
@@ -656,10 +632,6 @@ body {
 
 .w-full {
   width: 100%;
-}
-
-.w-\[78rem\] {
-  width: 78rem;
 }
 
 .flex-none {
@@ -692,7 +664,7 @@ body {
 
 .gap-x-6 {
   -moz-column-gap: 1.5rem;
-  column-gap: 1.5rem;
+       column-gap: 1.5rem;
 }
 
 .gap-y-6 {
@@ -721,10 +693,6 @@ body {
   border-radius: 0.375rem;
 }
 
-.border {
-  border-width: 1px;
-}
-
 .border-2 {
   border-width: 2px;
 }
@@ -734,7 +702,7 @@ body {
 }
 
 .border-l-\[\.3px\] {
-  border-left-width: 0.3px;
+  border-left-width: .3px;
 }
 
 .border-r-\[3px\] {
@@ -742,16 +710,12 @@ body {
 }
 
 .border-t-\[\.3px\] {
-  border-top-width: 0.3px;
+  border-top-width: .3px;
 }
 
 .border-heroTheme-300 {
   --tw-border-opacity: 1;
   border-color: rgb(46 62 48 / var(--tw-border-opacity));
-}
-
-.border-transparent {
-  border-color: transparent;
 }
 
 .border-transparent {
@@ -767,8 +731,6 @@ body {
   background-image: url('/client/assets/black-glitch-bg.png');
 }
 
-.bg-cover {
-  background-size: cover;
 .bg-cover {
   background-size: cover;
 }
@@ -788,11 +750,6 @@ body {
 .px-7 {
   padding-left: 1.75rem;
   padding-right: 1.75rem;
-}
-
-.py-2 {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
 }
 
 .py-3 {
@@ -815,10 +772,6 @@ body {
 
 .indent-8 {
   text-indent: 2rem;
-}
-
-.indent-24 {
-  text-indent: 6rem;
 }
 
 .font-buttonText {
@@ -884,20 +837,35 @@ body {
 
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color),
-    0 1px 2px -1px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
-    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .filter {
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
-    var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate)
-    var(--tw-sepia) var(--tw-drop-shadow);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .text-shadow {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.outline-title {
+  text-shadow:
+           1px 1px 0 #000,
+         -1px -1px 0 #000,  
+          1px -1px 0 #000,
+          -1px 1px 0 #000,
+           1px 1px 0 #000;
+}
+
+@keyframes pulse {
+  50% {
+    opacity: .5;
+  }
+}
+
+.hover\:animate-pulse:hover {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
 .hover\:border-b-\[3px\]:hover {
@@ -905,7 +873,7 @@ body {
 }
 
 .hover\:border-l-\[\.3px\]:hover {
-  border-left-width: 0.3px;
+  border-left-width: .3px;
 }
 
 .hover\:border-r-\[3px\]:hover {
@@ -913,7 +881,7 @@ body {
 }
 
 .hover\:border-t-\[\.3px\]:hover {
-  border-top-width: 0.3px;
+  border-top-width: .3px;
 }
 
 .hover\:border-heroTheme-300:hover {
@@ -921,14 +889,22 @@ body {
   border-color: rgb(46 62 48 / var(--tw-border-opacity));
 }
 
-.hover\:bg-heroTheme-400:hover {
+.hover\:bg-emerald-500:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 216 137 / var(--tw-bg-opacity));
+  background-color: rgb(16 185 129 / var(--tw-bg-opacity));
+}
+
+.hover\:text-black:hover {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 .hover\:shadow-\[4px_4px_4\.8px_0px_rgba\(0\2c 0\2c 0\2c 0\.2\)\]:hover {
-  --tw-shadow: 4px 4px 4.8px 0px rgba(0, 0, 0, 0.2);
+  --tw-shadow: 4px 4px 4.8px 0px rgba(0,0,0,0.2);
   --tw-shadow-colored: 4px 4px 4.8px 0px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
-    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.hover\:outline-title-none:hover {
+  text-shadow:none
 }
