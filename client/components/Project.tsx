@@ -1,6 +1,6 @@
 import { ReactNode, useEffect, useState } from 'react';
 import { Navigate } from 'react-router-dom';
-import data from '../assets/data';
+import {exportData} from '../assets/data';
 
 type ProjectProps = {
   projectNum: number;
@@ -19,6 +19,9 @@ type ProjectData = {
 type TechStackItem = string | number | boolean | ReactNode;
 
 export default function Project({ projectNum, handleProject }: ProjectProps) {
+
+  const data = exportData();
+
   if (projectNum > data.size) {
     return <Navigate to="/contact" />;
   }
