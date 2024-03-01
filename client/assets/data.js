@@ -18,9 +18,6 @@ function lazyLoadImage(container, imageName) {
     `./images/${imageName}`
   )
     .then((src) => {
-      console.log('within lazyLoadImage');
-      console.log({ src });
-      console.log({ imageName });
       container.set(imageName, src.default);
     })
     .catch((err) => console.error(err));
@@ -35,7 +32,6 @@ function getImagesNames() {
 
 function exportData() {
   // Export data or perform any other actions with the data
-  console.log('Exported data:', data);
   return data;
 }
 
@@ -78,9 +74,6 @@ loadImageMap().then(() => {
     });
   });
   
-  // makeDataPromise.then(() => console.log('makeDataPromise done!'));
-
-  // exportData();
 });
 
 export { exportData };
