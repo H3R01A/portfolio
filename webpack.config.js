@@ -45,6 +45,9 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.json', '.css', '.scss'],
     modules: ['client', 'node_modules'],
+    alias: {
+      images: path.resolve(__dirname, 'client/assets/images'),
+    },
   },
   plugins: [
     new HtmlWebpackPlugin({
