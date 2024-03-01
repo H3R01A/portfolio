@@ -2,6 +2,7 @@ import { ReactNode, useEffect, useState } from 'react';
 import { Navigate } from 'react-router-dom';
 import {exportData} from '../assets/data';
 
+
 type ProjectProps = {
   projectNum: number;
   handleProject: (num: number, projectTotalNum: number) => void;
